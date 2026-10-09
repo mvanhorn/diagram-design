@@ -1,0 +1,142 @@
+{
+  "repo": "cathrynlavery/diagram-design",
+  "fork": "mvanhorn/diagram-design",
+  "status": "ok",
+  "proposal_lane": true,
+  "proposal_surface": {
+    "type": "issue",
+    "template": "feature_request.yml"
+  },
+  "plans_written": 2,
+  "plan_files": [
+    "osc-plans/service-blueprint.md",
+    "osc-plans/plantuml-import.md"
+  ],
+  "fork_sync": {
+    "local": "f4547ee95f88e5b28a52517feff6b6c11cc657f9",
+    "origin_main": "f4547ee95f88e5b28a52517feff6b6c11cc657f9",
+    "upstream_main": "f4547ee95f88e5b28a52517feff6b6c11cc657f9",
+    "ahead_behind": "0 0",
+    "matches": true
+  },
+  "features": [
+    {
+      "stem": "service-blueprint",
+      "title": "feat: add a service blueprint visual type",
+      "summary": "New visual type #45: a shared stage grid with customer/frontstage above a line of visibility and backstage/support below it, plus a verifier, three example variants, and the full type shipping set.",
+      "why_selected": "Unique layout grammar that journey, swimlane, and process cannot express; editorial fit; visually demoable in 30s; one focused PR; no overlapping issue or PR; follows the waterfall-type path that already merged here.",
+      "dup_check": "CLEAN 2026-10-09. Open issues 21, open PRs 29. No issue/PR for service blueprint. Not in #62. Not on ADR 0007 rejected list. Does not overlap #190.",
+      "score": 9
+    },
+    {
+      "stem": "plantuml-import",
+      "title": "feat: import PlantUML sequence and class diagrams for editorial redraw",
+      "summary": "Fourth import pipeline (sequence + class only): untrusted-text extractor, command, Pi prompt, fixtures, verifier, and a single-variant worked example — parallel to draw.io, Mermaid, and Excalidraw.",
+      "why_selected": "Fills the remaining human-authored text-diagram hole while Sequence and UML class types already exist; different files from the type PR and from open mermaid PRs; same shape as merged Excalidraw import #192; demoable extractor-to-redraw in 45s.",
+      "dup_check": "CLEAN 2026-10-09. gh search plantuml issues/PRs empty. Does not fold #209/#284. Does not implement #190 (inventory-only doctor wiring). Does not edit mermaid_extract.py.",
+      "score": 9
+    }
+  ],
+  "chosen_features": [
+    {
+      "title": "feat: add a service blueprint visual type",
+      "plan_file": "osc-plans/service-blueprint.md",
+      "stem": "service-blueprint",
+      "deep_rubric_score": 9,
+      "pre_plan_score": 9,
+      "post_plan_score": 9,
+      "complexity": "M",
+      "source": "novel:theme",
+      "citations": [
+        {"kind": "social", "id": "signal-journey-adjacent"},
+        {"kind": "repo", "id": "adr-0007-journey-precedent"}
+      ],
+      "open_issue_overlap": []
+    },
+    {
+      "title": "feat: import PlantUML sequence and class diagrams for editorial redraw",
+      "plan_file": "osc-plans/plantuml-import.md",
+      "stem": "plantuml-import",
+      "deep_rubric_score": 9,
+      "pre_plan_score": 9,
+      "post_plan_score": 9,
+      "complexity": "M",
+      "source": "novel:cross-ref",
+      "citations": [
+        {"kind": "social", "id": "signal-text-diagram-redraw"},
+        {"kind": "repo", "id": "pr-192-excalidraw-precedent"}
+      ],
+      "open_issue_overlap": []
+    }
+  ],
+  "autonomous_check_inputs": {
+    "pre_plan_score": 9,
+    "post_plan_score": 9,
+    "PROCESS_LEVEL": "ISSUE_FIRST",
+    "NO_AI_OPPOSED": true,
+    "NO_COMPETING_PRS": true,
+    "HAS_PRECEDENT": true,
+    "WARMTH_SCORE": 2,
+    "OPEN_PRS_AUTHORED": 1,
+    "REPO_OPEN_PRS_TOTAL": 29,
+    "IS_OWN_PROJECT": false
+  },
+  "quick_fixes": [
+    {
+      "title": "fix(import): mermaid compact dotted/dash labels with spaces (#209)",
+      "note": "Bug, not a feature. Open PR #284 already covers it. run /osc-plan only if that PR stalls."
+    }
+  ],
+  "considered_not_selected": [
+    {
+      "title": "Git graph visual type",
+      "reason": "ADR 0007 rejected: narrow audience, weak editorial fit, revisit only on demand. No matching open demand signal."
+    },
+    {
+      "title": "C4 context as a visual type",
+      "reason": "ADR 0007 rejected as a zoom-level convention over Architecture (pattern territory, not a type)."
+    },
+    {
+      "title": "Remaining #62 dataviz (waffle, hex, arc, small multiples, warming stripes, punch card)",
+      "reason": "Open issue #62 plus waffle PR #198. Duplicate."
+    },
+    {
+      "title": "Mermaid extra grammars (sankey/gantt/journey/classDiagram)",
+      "reason": "Would edit mermaid_extract.py under open PRs #282 and #284. Strong later candidate once those land."
+    },
+    {
+      "title": "Sunburst visual type",
+      "reason": "Risk of ADR 0007 mindmap rejection (same hierarchical proportion, different projection vs treemap)."
+    }
+  ],
+  "social_pass": {
+    "invoked": true,
+    "engine": {
+      "kind": "active_skill",
+      "script": "/home/box/src/open-source-contributor/skills/osc-newfeature/scripts/social_search.py"
+    },
+    "artifact": "social/cathrynlavery-diagram-design.json",
+    "status": "ok",
+    "gate": "passed",
+    "reason": null,
+    "provenance": "host_handoff",
+    "signals": {
+      "total": 88,
+      "main": 88,
+      "competitors": 0
+    },
+    "source_coverage": {
+      "searched": ["tiktok", "reddit", "youtube"],
+      "failed": {
+        "x": "HTTPError: 404 Client Error: Not Found for url: https://api.scrapecreators.com/v1/twitter/search/tweets?query=ai+agent+skill+for+generating+diagrams&sort_by=relevance"
+      }
+    },
+    "competitor_coverage": "skipped_pre_step3",
+    "completed_at": "2026-10-09T00:07:18.077955+00:00"
+  },
+  "skipped_reasons": {},
+  "matt_history": {
+    "merged": [24, 25, 191, 192],
+    "open": [190]
+  }
+}
