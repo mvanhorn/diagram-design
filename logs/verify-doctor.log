@@ -1,0 +1,10 @@
+Doctor summary: WARN (4 pass, 1 warn, 0 fail)
+[PASS] Python runtime: Python 3.12.3 found via python3 at /usr/bin/python3.
+[WARN] Playwright PNG export readiness: Playwright package is not available in the active Python interpreter.
+[PASS] Expected script presence: All required scripts are present (7 checked).
+[PASS] Plugin wiring surfaces: All command/prompt routing surfaces are present and wired (13 checked).
+[PASS] Common path mistakes: No common path mistakes were detected.
+
+Next actions
+- Provision an approved Playwright renderer in the host environment, then re-run this check.
+EXIT:0

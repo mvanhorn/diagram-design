@@ -1,0 +1,2 @@
+CMD: python3 scripts/build-icons.py && git diff --exit-code -- skills/diagram-design/assets/icons.html skills/diagram-design/references/primitive-icons.md
+PASS

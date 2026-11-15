@@ -1,0 +1,407 @@
+=== test-plugin-package ===
+CMD: python3 scripts/test-plugin-package.py
+PASS (91s)
+
+=== test-maintainer-policy ===
+CMD: python3 scripts/test-maintainer-policy.py
+PASS (0s)
+
+=== test-build-openai-plugin-zip ===
+CMD: python3 scripts/test-build-openai-plugin-zip.py
+PASS (2s)
+
+=== verify-plugin-package ===
+CMD: python3 scripts/verify-plugin-package.py --require-no-bump origin/main
+PASS (0s)
+
+=== claude-plugin-validate ===
+CMD: .github/ci/node/node_modules/.bin/claude plugin validate . --strict
+PASS (0s)
+
+=== test-lint-a11y ===
+CMD: python3 scripts/test-lint-a11y.py
+PASS (3s)
+
+=== test-install-scan ===
+CMD: python3 scripts/test-install-scan.py
+PASS (0s)
+
+=== verify-semantic-motion-md ===
+CMD: python3 scripts/verify-semantic-motion.py --markdown-only
+PASS (0s)
+
+=== verify-semantic-motion-ex ===
+CMD: python3 scripts/verify-semantic-motion.py --example-only
+PASS (0s)
+
+=== verify-motion-shipped ===
+CMD: python3 scripts/verify-motion.py --shipped
+PASS (0s)
+
+=== lint-skin ===
+CMD: python3 scripts/lint-skin.py --all --baseline
+PASS (1s)
+
+=== lint-skin-animated ===
+CMD: python3 scripts/lint-skin.py skills/diagram-design/assets/example-policy-trace-animated.html
+PASS (0s)
+
+=== test-verify-contrast ===
+CMD: python3 scripts/test-verify-contrast.py
+PASS (0s)
+
+=== verify-contrast ===
+CMD: python3 scripts/verify-contrast.py
+PASS (0s)
+
+=== test-verify-unit-grid ===
+CMD: python3 scripts/test-verify-unit-grid.py
+PASS (2s)
+
+=== verify-unit-grid ===
+CMD: python3 scripts/verify-unit-grid.py --all
+PASS (0s)
+
+=== test-verify-polar ===
+CMD: python3 scripts/test-verify-polar.py
+PASS (0s)
+
+=== verify-polar ===
+CMD: python3 scripts/verify-polar.py
+PASS (0s)
+
+=== test-verify-heatmap ===
+CMD: python3 scripts/test-verify-heatmap.py
+PASS (1s)
+
+=== verify-heatmap ===
+CMD: python3 scripts/verify-heatmap.py --all
+PASS (0s)
+
+=== verify-sequence-oauth ===
+CMD: python3 scripts/verify-sequence-oauth.py
+PASS (2s)
+
+=== test-verify-semantic-motion ===
+CMD: python3 scripts/test-verify-semantic-motion.py
+PASS (0s)
+
+=== test-verify-sequence-oauth ===
+CMD: python3 scripts/test-verify-sequence-oauth.py
+PASS (15s)
+
+=== verify-drawio-import ===
+CMD: python3 scripts/verify-drawio-import.py
+PASS (3s)
+
+=== test-verify-drawio-import ===
+CMD: python3 scripts/test-verify-drawio-import.py
+PASS (12s)
+
+=== verify-mermaid-import ===
+CMD: python3 scripts/verify-mermaid-import.py
+PASS (11s)
+
+=== verify-excalidraw-import ===
+CMD: python3 scripts/verify-excalidraw-import.py
+PASS (2s)
+
+=== test-verify-excalidraw-import ===
+CMD: python3 scripts/test-verify-excalidraw-import.py
+PASS (9s)
+
+=== verify-plantuml-import ===
+CMD: python3 scripts/verify-plantuml-import.py
+PASS (9s)
+
+=== test-verify-plantuml-import ===
+CMD: python3 scripts/test-verify-plantuml-import.py
+PASS (50s)
+
+=== test-verify-motion ===
+CMD: python3 scripts/test-verify-motion.py
+PASS (0s)
+
+=== verify-doctor ===
+CMD: python3 scripts/verify-doctor.py
+PASS (0s)
+
+=== test-verify-doctor ===
+CMD: python3 scripts/test-verify-doctor.py
+PASS (1s)
+
+=== verify-docs-sync ===
+CMD: python3 scripts/verify-docs-sync.py
+PASS (1s)
+
+=== test-verify-docs-sync ===
+CMD: python3 scripts/test-verify-docs-sync.py
+PASS (0s)
+
+=== verify-screenshot-freshness ===
+CMD: python3 scripts/verify-screenshot-freshness.py
+PASS (0s)
+
+=== test-verify-screenshot-freshness ===
+CMD: python3 scripts/test-verify-screenshot-freshness.py
+PASS (1s)
+
+=== test-self-check ===
+CMD: python3 scripts/test-self-check.py
+PASS (1s)
+
+=== test-export-svg-standalone ===
+CMD: python3 scripts/test-export-svg-standalone.py
+PASS (7s)
+
+=== verify-geometry ===
+CMD: python3 scripts/verify-geometry.py --all
+PASS (0s)
+
+=== test-verify-geometry ===
+CMD: python3 scripts/test-verify-geometry.py
+PASS (2s)
+
+=== verify-architecture-delta ===
+CMD: python3 scripts/verify-architecture-delta.py --all
+PASS (0s)
+
+=== test-verify-architecture-delta ===
+CMD: python3 scripts/test-verify-architecture-delta.py
+PASS (1s)
+
+=== verify-architecture-containment ===
+CMD: python3 scripts/verify-architecture-containment.py --all
+PASS (1s)
+
+=== test-verify-architecture-containment ===
+CMD: python3 scripts/test-verify-architecture-containment.py
+PASS (1s)
+
+=== build-exploded-check ===
+CMD: python3 scripts/build-exploded-examples.py --check
+PASS (0s)
+
+=== verify-exploded ===
+CMD: python3 scripts/verify-exploded.py --all
+PASS (0s)
+
+=== test-verify-exploded ===
+CMD: python3 scripts/test-verify-exploded.py
+PASS (2s)
+
+=== build-axo-plan-check ===
+CMD: python3 scripts/build-axonometric-plan-examples.py --check
+PASS (0s)
+
+=== verify-axonometric-plan ===
+CMD: python3 scripts/verify-axonometric-plan.py --all
+PASS (0s)
+
+=== test-verify-axonometric-plan ===
+CMD: python3 scripts/test-verify-axonometric-plan.py
+PASS (3s)
+
+=== verify-sbgn ===
+CMD: python3 scripts/verify-sbgn.py --all
+PASS (0s)
+
+=== test-verify-sbgn ===
+CMD: python3 scripts/test-verify-sbgn.py
+PASS (2s)
+
+=== verify-block-registry ===
+CMD: python3 scripts/verify-block-registry.py --all
+PASS (0s)
+
+=== test-verify-block-registry ===
+CMD: python3 scripts/test-verify-block-registry.py
+PASS (0s)
+
+=== verify-treemap ===
+CMD: python3 scripts/verify-treemap.py --all
+PASS (0s)
+
+=== test-verify-treemap ===
+CMD: python3 scripts/test-verify-treemap.py
+PASS (2s)
+
+=== verify-marimekko ===
+CMD: python3 scripts/verify-marimekko.py --all
+PASS (0s)
+
+=== test-verify-marimekko ===
+CMD: python3 scripts/test-verify-marimekko.py
+PASS (1s)
+
+=== verify-dumbbell ===
+CMD: python3 scripts/verify-dumbbell.py
+PASS (0s)
+
+=== test-verify-dumbbell ===
+CMD: python3 scripts/test-verify-dumbbell.py
+PASS (0s)
+
+=== verify-slopegraph ===
+CMD: python3 scripts/verify-slopegraph.py --all
+PASS (0s)
+
+=== test-verify-slopegraph ===
+CMD: python3 scripts/test-verify-slopegraph.py
+PASS (0s)
+
+=== verify-streamgraph ===
+CMD: python3 scripts/verify-streamgraph.py --all
+PASS (1s)
+
+=== test-verify-streamgraph ===
+CMD: python3 scripts/test-verify-streamgraph.py
+PASS (0s)
+
+=== verify-ridgeline ===
+CMD: python3 scripts/verify-ridgeline.py --all
+PASS (1s)
+
+=== test-verify-ridgeline ===
+CMD: python3 scripts/test-verify-ridgeline.py
+PASS (2s)
+
+=== verify-sankey ===
+CMD: python3 scripts/verify-sankey.py --all
+PASS (0s)
+
+=== test-verify-sankey ===
+CMD: python3 scripts/test-verify-sankey.py
+PASS (5s)
+
+=== verify-waterfall ===
+CMD: python3 scripts/verify-waterfall.py --all
+PASS (0s)
+
+=== test-verify-waterfall ===
+CMD: python3 scripts/test-verify-waterfall.py
+PASS (2s)
+
+=== verify-service-blueprint ===
+CMD: python3 scripts/verify-service-blueprint.py --all
+PASS (0s)
+
+=== test-verify-service-blueprint ===
+CMD: python3 scripts/test-verify-service-blueprint.py
+PASS (1s)
+
+=== verify-steps ===
+CMD: python3 scripts/verify-steps.py --all
+PASS (0s)
+
+=== test-verify-steps ===
+CMD: python3 scripts/test-verify-steps.py
+PASS (4s)
+
+=== verify-bubble ===
+CMD: python3 scripts/verify-bubble.py --all
+PASS (0s)
+
+=== test-verify-bubble ===
+CMD: python3 scripts/test-verify-bubble.py
+PASS (0s)
+
+=== verify-bump ===
+CMD: python3 scripts/verify-bump.py --all
+PASS (0s)
+
+=== test-verify-bump ===
+CMD: python3 scripts/test-verify-bump.py
+PASS (2s)
+
+=== verify-beeswarm ===
+CMD: python3 scripts/verify-beeswarm.py --all
+PASS (0s)
+
+=== test-verify-beeswarm ===
+CMD: python3 scripts/test-verify-beeswarm.py
+PASS (1s)
+
+=== verify-box-plot ===
+CMD: python3 scripts/verify-box-plot.py --all
+PASS (0s)
+
+=== test-verify-box-plot ===
+CMD: python3 scripts/test-verify-box-plot.py
+PASS (1s)
+
+=== verify-arc-diagram ===
+CMD: python3 scripts/verify-arc-diagram.py --all
+PASS (0s)
+
+=== test-verify-arc-diagram ===
+CMD: python3 scripts/test-verify-arc-diagram.py
+PASS (0s)
+
+=== test-css-string-scan ===
+CMD: python3 scripts/test-css-string-scan.py
+PASS (24s)
+
+=== verify-skin-polarity ===
+CMD: python3 scripts/verify-skin-polarity.py --all
+PASS (0s)
+
+=== test-verify-skin-polarity ===
+CMD: python3 scripts/test-verify-skin-polarity.py
+PASS (2s)
+
+=== verify-requirement-traceability ===
+CMD: python3 scripts/verify-requirement-traceability.py --all
+PASS (0s)
+
+=== test-verify-requirement-traceability ===
+CMD: python3 scripts/test-verify-requirement-traceability.py
+PASS (0s)
+
+=== verify-event-modeling ===
+CMD: python3 scripts/verify-event-modeling.py --all
+PASS (0s)
+
+=== test-verify-event-modeling ===
+CMD: python3 scripts/test-verify-event-modeling.py
+PASS (1s)
+
+=== test-build-icons-quoted ===
+CMD: python3 scripts/test-build-icons-quoted-attributes.py
+PASS (0s)
+
+=== test-build-icons-devicon ===
+CMD: python3 scripts/test-build-icons-devicon.py
+PASS (0s)
+
+=== test-fix-mojibake ===
+CMD: python3 scripts/test-fix-mojibake.py
+PASS (0s)
+
+=== build-icons ===
+CMD: python3 scripts/build-icons.py
+PASS (0s)
+
+=== lint-render-selftest ===
+CMD: uv run --locked --project /workspace/.github/ci/python python scripts/lint-render.py --self-test
+PASS (21s)
+
+=== lint-render-all ===
+CMD: uv run --locked --project /workspace/.github/ci/python python scripts/lint-render.py --all
+PASS (200s)
+
+=== test-export-wait ===
+CMD: uv run --locked --project /workspace/.github/ci/python python scripts/test-export-wait.py
+PASS (20s)
+
+=== test-build-readme-thumbs ===
+CMD: uv run --locked --project /workspace/.github/ci/python python scripts/test-build-readme-thumbs.py
+PASS (1s)
+
+=== build-readme-thumbs-check ===
+CMD: uv run --locked --project /workspace/.github/ci/python python scripts/build-readme-thumbs.py --check
+PASS (1s)
+
+==== TOTAL ====
+passed: 101
+failed: 0

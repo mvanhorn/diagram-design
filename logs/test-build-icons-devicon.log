@@ -1,0 +1,2 @@
+PASS: Devicon normalization preserves non-128 source viewBoxes
+EXIT:0

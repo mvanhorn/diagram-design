@@ -1,0 +1,182 @@
+# Real captured command output for mermaid quadrantChart import
+# Working directory: /workspace
+
+# --- before: extractor from upstream main ---
+$ python3 /tmp/demo-quad/upstream-mermaid_extract.py /tmp/demo-quad/roadmap.md
+mermaid_extract: unsupported diagram kind: `quadrantChart` (supported: flowchart, sequenceDiagram, stateDiagram-v2, erDiagram)
+(exit 2)
+
+# --- after: extractor on this branch ---
+$ python3 /workspace/skills/diagram-design/scripts/mermaid_extract.py /tmp/demo-quad/roadmap.md
+# Mermaid IR — roadmap.md
+
+1 diagram(s): [0] quadrant (8p)
+
+## Diagram 0 — quadrant
+
+- source layout: none (Mermaid is layout-free); kind: quadrantChart
+- title: Impact x Effort — Q1 delivery
+- x-axis: Low Effort → High Effort
+- y-axis: Low Impact → High Impact
+- quadrants: 1=Do first; 2=Major projects; 3=Quick wins; 4=Avoid
+- points: 8
+- type candidates: quadrant
+- budget: points ok (recommended max 12)
+- discarded: 1 style directives, 0 click handlers, 0 config directives
+- notes: 1 discarded styling
+
+### Points
+
+| label | x | y |
+|---|---|---|
+| Billing API | 0.22 | 0.82 |
+| SSO rollout | 0.71 | 0.78 |
+| Search ranking | 0.58 | 0.64 |
+| Invoice PDF | 0.18 | 0.41 |
+| Dark mode | 0.31 | 0.28 |
+| Rewrite UI kit | 0.88 | 0.22 |
+| Audit log | 0.44 | 0.71 |
+| Onboarding email | 0.15 | 0.55 |
+(exit 0)
+
+$ python3 /workspace/skills/diagram-design/scripts/mermaid_extract.py /tmp/demo-quad/roadmap.md --json
+{
+  "source": "/tmp/demo-quad/roadmap.md",
+  "diagrams_total": 1,
+  "diagrams": [
+    {
+      "index": 0,
+      "kind": "quadrant",
+      "source_line": 8,
+      "direction": "TD",
+      "analysis": {
+        "nodes_total": 8,
+        "nodes_drawable": 8,
+        "containers": 0,
+        "leaves": 8,
+        "edges_total": 0,
+        "edges_labeled": 0,
+        "edges_dangling": 0,
+        "max_depth": 0,
+        "shapes": {
+          "point": 8
+        },
+        "has_cycle": false,
+        "hubs": [],
+        "entry_points": [],
+        "terminals": [],
+        "orphans": [],
+        "type_candidates": [
+          "quadrant"
+        ],
+        "collapsible_groups": [],
+        "over_node_budget": false,
+        "over_edge_budget": false
+      },
+      "discarded": {
+        "style_directives": 1,
+        "click_handlers": 0,
+        "config_directives": 0
+      },
+      "fragments": [],
+      "notes": [
+        "1 discarded styling"
+      ],
+      "autonumber": [],
+      "nodes": [],
+      "edges": [],
+      "title": "Impact x Effort — Q1 delivery",
+      "x_axis": {
+        "low": "Low Effort",
+        "high": "High Effort"
+      },
+      "y_axis": {
+        "low": "Low Impact",
+        "high": "High Impact"
+      },
+      "quadrants": {
+        "1": "Do first",
+        "2": "Major projects",
+        "3": "Quick wins",
+        "4": "Avoid"
+      },
+      "points": [
+        {
+          "label": "Billing API",
+          "x": 0.22,
+          "y": 0.82
+        },
+        {
+          "label": "SSO rollout",
+          "x": 0.71,
+          "y": 0.78
+        },
+        {
+          "label": "Search ranking",
+          "x": 0.58,
+          "y": 0.64
+        },
+        {
+          "label": "Invoice PDF",
+          "x": 0.18,
+          "y": 0.41
+        },
+        {
+          "label": "Dark mode",
+          "x": 0.31,
+          "y": 0.28
+        },
+        {
+          "label": "Rewrite UI kit",
+          "x": 0.88,
+          "y": 0.22
+        },
+        {
+          "label": "Audit log",
+          "x": 0.44,
+          "y": 0.71
+        },
+        {
+          "label": "Onboarding email",
+          "x": 0.15,
+          "y": 0.55
+        }
+      ]
+    }
+  ]
+}
+(exit 0)
+
+# --- named failures ---
+$ python3 /workspace/skills/diagram-design/scripts/mermaid_extract.py /tmp/demo-quad/out-of-range.mmd
+mermaid_extract: point coordinate outside [0, 1] at line 4
+(exit 2)
+
+$ python3 /workspace/skills/diagram-design/scripts/mermaid_extract.py /tmp/demo-quad/duplicate.mmd
+mermaid_extract: duplicate point label at line 4
+(exit 2)
+
+# --- redraw from extracted IR ---
+$ python3 /tmp/demo-quad/build_html.py /tmp/demo-quad/roadmap.json /tmp/demo-quad/quadrant-light.html light
+wrote /tmp/demo-quad/quadrant-light.html
+(exit 0)
+
+$ python3 /tmp/demo-quad/build_html.py /tmp/demo-quad/roadmap.json /tmp/demo-quad/quadrant-dark.html dark
+wrote /tmp/demo-quad/quadrant-dark.html
+(exit 0)
+
+$ python3 /workspace/scripts/lint-skin.py /tmp/demo-quad/quadrant-light.html
+Summary: 1 file(s) checked, 0 skipped, 0 finding(s).
+(exit 0)
+
+$ python3 /workspace/scripts/lint-skin.py /tmp/demo-quad/quadrant-dark.html
+Summary: 1 file(s) checked, 0 skipped, 0 finding(s).
+(exit 0)
+
+# --- PNG export via the packaged Playwright path ---
+$ uv run --locked --project /workspace/.github/ci/python python /workspace/skills/diagram-design/scripts/export_png.py /tmp/demo-quad/quadrant-light.html /tmp/demo-quad/screenshots/light.png 2
+(exit 0)
+
+$ uv run --locked --project /workspace/.github/ci/python python /workspace/skills/diagram-design/scripts/export_png.py /tmp/demo-quad/quadrant-dark.html /tmp/demo-quad/screenshots/dark.png 2
+(exit 0)
+
