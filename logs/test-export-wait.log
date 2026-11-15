@@ -1,0 +1,8 @@
+OK: stalled stylesheet cancels via window.stop(), warns, and captures in 2.3s
+OK: actual stalled font cancels, fonts.ready finishes, and PNG captures in 2.3s
+OK: normal load captures with no fallback warning
+OK: legal filename characters are encoded in the file URL
+OK: fractional scales produce exact dimensions; invalid scales fail
+OK: non-timeout failure propagates (Error)
+OK: motion exports show the complete static frame, repeat identically, and reject incomplete roots
+All export-wait cases passed.

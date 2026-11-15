@@ -1,0 +1,79 @@
+$ python3 scripts/verify-git-graph.py --all
+OK git graph: 3 file(s), every commit on its lane and column grid, every merge with exactly two earlier parents on different lanes, connectors that turn at the parent or merge column, no right-to-left connectors, tags on existing commits, at most two coral commits, and lanes that do not overlap (232 file(s) skipped as out of scope)
+exit 0
+
+$ python3 scripts/test-verify-git-graph.py
+ok    shipped example-git-graph.html exists
+ok    shipped example-git-graph.html is clean
+ok    shipped example-git-graph-dark.html exists
+ok    shipped example-git-graph-dark.html is clean
+ok    shipped example-git-graph-full.html exists
+ok    shipped example-git-graph-full.html is clean
+ok    an honest synthetic git graph passes
+ok    quoted CSS data that looks like transform is not a declaration
+ok    single-quoted CSS data that looks like transform is not a declaration
+ok    a live transform in a <style> rule is a finding
+ok    a live transform after a quoted string is still a finding
+ok    a layout-only width/height rule passes
+ok    a <style> rule that moves marks inside <!-- --> is still refused
+ok    a merge with one parent is a finding
+ok    a connector going backwards is a finding
+ok    a branch that runs along the parent lane is a finding
+ok    a branch collinear with the parent lane is a finding
+ok    a merge that runs along the destination lane is a finding
+ok    a merge collinear with the destination lane is a finding
+ok    a commit off its lane is a finding
+ok    a commit off the shared pitch is a finding
+ok    a tag attached to a missing commit is a finding
+ok    three coral commits are a finding
+ok    overlapping lanes are a finding
+ok    a transform on a commit is a finding
+ok    a bound commit with style="display:none" is a finding
+ok    a bound commit with display="none" is a finding
+ok    a bound commit with visibility="hidden" is a finding
+ok    a bound commit with opacity="0" is a finding
+ok    three commits is fail-closed
+ok    one lane is fail-closed
+ok    no merge commit is fail-closed
+ok    a timeline is not a git graph
+ok    data-value on a <circle> never claims a file — the beeswarm contract
+ok    no shipped git-graph file declares data-value on a circle, data-q1, data-span, data-series, data-ranks or data-size, so no sibling verifier claims one
+ok    verify-arc-diagram.py skips all three shipped git-graph files
+ok    verify-beeswarm.py skips all three shipped git-graph files
+ok    verify-box-plot.py skips all three shipped git-graph files
+ok    verify-bubble.py skips all three shipped git-graph files
+ok    verify-slopegraph.py skips all three shipped git-graph files
+ok    verify-bump.py skips all three shipped git-graph files
+ok    a pre-existing file sharing a fixture name is never touched
+ok    fixtures are written outside the repository
+
+OK git-graph checker: 43 case(s), both polarities
+exit 0
+
+$ python3 scripts/verify-git-graph.py /tmp/git-graph-one-parent.html
+git-graph-one-parent.html: merge commit 'm1' has 1 incoming connector(s) — a merge has exactly two incoming connectors
+
+1 git-graph finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/verify-git-graph.py /tmp/git-graph-backwards.html
+git-graph-backwards.html:46: connector c2→c1 runs right-to-left (column 2 → 1) — parents sit on earlier columns
+git-graph-backwards.html:46: connector c2→c1 goes right-to-left in its path — time reads left to right
+git-graph-backwards.html: commit 'c1' has 2 incoming connectors without data-kind=merge — two parents make a merge commit
+
+3 git-graph finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/lint-skin.py --all --baseline
+Summary: 240 file(s) checked, 20 skipped, 0 finding(s).
+exit 0
+
+$ python3 scripts/verify-docs-sync.py
+OK docs sync: description hooks, gallery reachability, README tree, reference links and style-guide anchors, asset citations, packaged support files, routing surfaces, size-preset surfaces, manifest descriptions, Factory install contract, type-count routing, High-Level invariants, onboarding trust boundary, Line dark-skin contract, Loop station origin, font-link parity, title fallback order, type-ramp contract, registered legacy type sizes, split routing, export surface parity
+exit 0
+
+$ python3 scripts/lint-render.py skills/diagram-design/assets/example-git-graph.html skills/diagram-design/assets/example-git-graph-dark.html skills/diagram-design/assets/example-git-graph-full.html
+Chromium 151.0.7922.34, network: MAP * ~NOTFOUND
+skills/diagram-design/assets/example-git-graph-full.html: unmeasurable: svg sits inside scrolling div.diagram-container (overflow: auto); clipping cannot be measured through it
+Summary: 3 file(s) rendered, 0 finding(s), 1 note(s) (not checked, not failed).
+exit 0

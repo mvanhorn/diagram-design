@@ -1,0 +1,5 @@
+skills/diagram-design/assets/example-git-graph-full.html: unmeasurable: svg sits inside scrolling div.diagram-container (overflow: auto); clipping cannot be measured through it
+skills/diagram-design/assets/example-service-blueprint-full.html: unmeasurable: svg sits inside scrolling div.diagram-container (overflow: auto); clipping cannot be measured through it
+skills/diagram-design/assets/example-steps-full.html: unmeasurable: svg sits inside scrolling div.diagram-container (overflow: auto); clipping cannot be measured through it
+Summary: 240 file(s) rendered, 0 finding(s), 3 note(s) (not checked, not failed).
+Chromium 151.0.7922.34, network: MAP * ~NOTFOUND
