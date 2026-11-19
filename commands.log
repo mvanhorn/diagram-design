@@ -1,0 +1,43 @@
+# commands.log — real stdout/stderr from the Claude Desktop skill ZIP demo
+# host: Linux, Python 3.13.5
+# cwd: /workspace/osc-bulk-1119/diagram-design/wt-claude-skill-zip
+# branch: feat/claude-skill-zip 6e01bf8
+# date: 2026-11-19T17:14:52Z
+
+$ find skills/diagram-design -type f | wc -l
+325
+exit 0
+
+$ python3 -m zipfile -c /tmp/naive-diagram-design.zip skills/diagram-design
+exit 0
+
+$ python3 /tmp/count_zip.py /tmp/naive-diagram-design.zip
+325 files in /tmp/naive-diagram-design.zip
+1565007 bytes
+exit 0
+
+$ python3 scripts/build-claude-skill-zip.py
+OK built /workspace/osc-bulk-1119/diagram-design/wt-claude-skill-zip/dist/diagram-design-claude-skill.zip (164 files, 791,653 bytes)
+exit 0
+
+$ python3 scripts/build-claude-skill-zip.py --check
+OK Claude Desktop skill ZIP: 164 files, 2,669,104 bytes uncompressed (host limit 200 files with margin 20; 31,457,280 bytes)
+exit 0
+
+$ python3 /tmp/head_zip.py dist/diagram-design-claude-skill.zip 14
+diagram-design/
+diagram-design/SKILL.md
+diagram-design/assets/
+diagram-design/assets/example-arc-diagram.html
+diagram-design/assets/example-architecture-containment.html
+diagram-design/assets/example-architecture-delta.html
+diagram-design/assets/example-architecture.html
+diagram-design/assets/example-axonometric-plan-campus.html
+diagram-design/assets/example-axonometric-plan-coffee-shop.html
+diagram-design/assets/example-axonometric-plan-warehouse.html
+diagram-design/assets/example-axonometric-plan.html
+diagram-design/assets/example-bar.html
+diagram-design/assets/example-beeswarm.html
+diagram-design/assets/example-box-plot.html
+... 164 files
+exit 0
