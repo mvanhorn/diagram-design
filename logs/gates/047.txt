@@ -1,0 +1,2 @@
+$ python3 scripts/test-build-readme-thumbs.py
+PASS: README thumbnails reject source, digest, decode, dimensions, orphan, manifest, and wiring drift without writing in --check mode

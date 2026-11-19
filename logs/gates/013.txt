@@ -1,0 +1,2 @@
+$ python3 scripts/test-build-icons-devicon.py
+PASS: Devicon normalization preserves non-128 source viewBoxes

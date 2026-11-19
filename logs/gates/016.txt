@@ -1,0 +1,2 @@
+$ python3 scripts/lint-skin.py --all --baseline
+Summary: 240 file(s) checked, 20 skipped, 0 finding(s).

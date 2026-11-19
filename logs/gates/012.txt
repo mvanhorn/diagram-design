@@ -1,0 +1,2 @@
+$ python3 scripts/test-build-icons-quoted-attributes.py
+PASS: URL SVG normalization handles single-quoted attributes

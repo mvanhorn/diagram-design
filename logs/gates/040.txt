@@ -1,0 +1,2 @@
+$ python3 scripts/test-verify-event-modeling.py
+OK event modeling: ordered stages, typed roles, and link endpoints

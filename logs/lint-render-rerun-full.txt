@@ -1,0 +1,13 @@
+playwright import ok
+(node:456595) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Chromium 159.0.8154.6, network: MAP * ~NOTFOUND
+self-test OK: 46 cases, no false flags.
+SELFTEST_EXIT=0
+(node:457874) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Chromium 159.0.8154.6, network: MAP * ~NOTFOUND
+skills/diagram-design/assets/example-service-blueprint-full.html: unmeasurable: svg sits inside scrolling div.diagram-container (overflow: auto); clipping cannot be measured through it
+skills/diagram-design/assets/example-steps-full.html: unmeasurable: svg sits inside scrolling div.diagram-container (overflow: auto); clipping cannot be measured through it
+Summary: 240 file(s) rendered, 0 finding(s), 2 note(s) (not checked, not failed).
+ALL_EXIT=0

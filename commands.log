@@ -1,0 +1,145 @@
+# commands.log — box-plot accent notations (#487 item 5)
+# Real stdout/stderr and exit codes. Worktree: /workspace/osc-bulk-1119/diagram-design/wt-box-plot-accent-notations
+# Date: 2026-11-19T16:40:44Z
+# upstream/main: d74d8c2d0c78a9e1efd43137f6a9a51182a8b5f0
+# feat/box-plot-accent-notations: 5f9d150f2eb2ee90527bfdcefc085ea493997b74
+
+###############################################################################
+# 1. Reproduce on upstream/main: mutated examples wrongly pass rule 7
+###############################################################################
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-hwb.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-lab.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-lch.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-oklab.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-oklch.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-currentColor_attr.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-named_tomato.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/dark-hwb.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/dark-lab.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/dark-oklch.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/dark-currentColor_attr.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 /tmp/main-box-plot/scripts/verify-box-plot.py /tmp/box-plot-accent-repro/dark-named_tomato.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+###############################################################################
+# 2. Same mutations on this branch: rule-7 finding (named colours stay a no-op)
+###############################################################################
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-hwb.html
+light-hwb.html: 2 series wear the accent (a box, underlay, median, whisker, cap or outlier) — a box plot has at most one focal series
+
+1 box-plot finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-lab.html
+light-lab.html: 2 series wear the accent (a box, underlay, median, whisker, cap or outlier) — a box plot has at most one focal series
+
+1 box-plot finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-lch.html
+light-lch.html: 2 series wear the accent (a box, underlay, median, whisker, cap or outlier) — a box plot has at most one focal series
+
+1 box-plot finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-oklab.html
+light-oklab.html: 2 series wear the accent (a box, underlay, median, whisker, cap or outlier) — a box plot has at most one focal series
+
+1 box-plot finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-oklch.html
+light-oklch.html: 2 series wear the accent (a box, underlay, median, whisker, cap or outlier) — a box plot has at most one focal series
+
+1 box-plot finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-currentColor_attr.html
+light-currentColor_attr.html: 2 series wear the accent (a box, underlay, median, whisker, cap or outlier) — a box plot has at most one focal series
+
+1 box-plot finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/light-named_tomato.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/dark-hwb.html
+dark-hwb.html: 2 series wear the accent (a box, underlay, median, whisker, cap or outlier) — a box plot has at most one focal series
+
+1 box-plot finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/dark-lab.html
+dark-lab.html: 2 series wear the accent (a box, underlay, median, whisker, cap or outlier) — a box plot has at most one focal series
+
+1 box-plot finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/dark-oklch.html
+dark-oklch.html: 2 series wear the accent (a box, underlay, median, whisker, cap or outlier) — a box plot has at most one focal series
+
+1 box-plot finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/dark-currentColor_attr.html
+dark-currentColor_attr.html: 2 series wear the accent (a box, underlay, median, whisker, cap or outlier) — a box plot has at most one focal series
+
+1 box-plot finding(s) across 1 file(s).
+exit 1
+
+$ python3 scripts/verify-box-plot.py /tmp/box-plot-accent-repro/dark-named_tomato.html
+OK box plot: 1 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names
+exit 0
+
+###############################################################################
+# 3. Shipped examples still pass
+###############################################################################
+$ python3 scripts/verify-box-plot.py --all
+OK box plot: 3 file(s), every box, median, whisker and outlier exactly at its value on one shared scale, ordered five-number summaries, at most one accent series, and every bound tick agreeing with the mark it names (232 file(s) skipped as out of scope)
+exit 0
+
+###############################################################################
+# 4. Tests: 18 FAIL on upstream/main checker, 227 OK on this branch
+###############################################################################
+$ python3 scripts/test-verify-box-plot.py   # this branch
+ok    fixtures are written outside the repository
+
+OK box-plot checker: 227 case(s), both polarities
+exit 0

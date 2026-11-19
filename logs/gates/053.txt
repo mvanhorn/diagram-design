@@ -1,0 +1,2 @@
+$ python3 scripts/verify-architecture-delta.py --all
+OK architecture delta: 3 file(s); identities, grids, changes, endpoints and ledger coverage agree.

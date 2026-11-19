@@ -1,0 +1,2 @@
+$ python3 scripts/test-verify-screenshot-freshness.py
+OK screenshot freshness regression tests: 9 checks

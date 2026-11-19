@@ -1,0 +1,4 @@
+$ python3 scripts/verify-steps.py --all
+OK /workspace/osc-bulk-1119/diagram-design/wt-box-plot-accent-notations/skills/diagram-design/assets/example-steps-dark.html
+OK /workspace/osc-bulk-1119/diagram-design/wt-box-plot-accent-notations/skills/diagram-design/assets/example-steps-full.html
+OK /workspace/osc-bulk-1119/diagram-design/wt-box-plot-accent-notations/skills/diagram-design/assets/example-steps.html

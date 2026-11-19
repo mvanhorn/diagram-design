@@ -1,0 +1,2 @@
+$ python3 scripts/verify-block-registry.py --all
+Summary: 242 file(s) checked, 0 finding(s).

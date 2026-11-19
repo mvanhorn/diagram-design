@@ -1,0 +1,5 @@
+$ python3 scripts/verify-service-blueprint.py --all
+OK /workspace/osc-bulk-1119/diagram-design/wt-box-plot-accent-notations/skills/diagram-design/assets/example-service-blueprint-dark.html
+OK /workspace/osc-bulk-1119/diagram-design/wt-box-plot-accent-notations/skills/diagram-design/assets/example-service-blueprint-full.html
+OK /workspace/osc-bulk-1119/diagram-design/wt-box-plot-accent-notations/skills/diagram-design/assets/example-service-blueprint.html
+OK service-blueprint: 3 file(s) keep the visibility line on a shared stage grid

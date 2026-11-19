@@ -1,0 +1,4 @@
+$ python3 scripts/verify-polar.py
+OK /workspace/osc-bulk-1119/diagram-design/wt-box-plot-accent-notations/skills/diagram-design/assets/example-polar.html
+OK /workspace/osc-bulk-1119/diagram-design/wt-box-plot-accent-notations/skills/diagram-design/assets/example-polar-dark.html
+OK /workspace/osc-bulk-1119/diagram-design/wt-box-plot-accent-notations/skills/diagram-design/assets/example-polar-full.html

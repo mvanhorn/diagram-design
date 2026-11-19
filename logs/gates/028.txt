@@ -1,0 +1,2 @@
+$ python3 scripts/test-verify-drawio-import.py
+OK: draw.io verifier rejects stale command names and elbowed worked-example routes

@@ -1,0 +1,2 @@
+$ python3 scripts/lint-skin.py skills/diagram-design/assets/example-policy-trace-animated.html
+Summary: 1 file(s) checked, 0 skipped, 0 finding(s).

@@ -1,0 +1,15 @@
+$ npm ci --prefix .github/ci/node && .github/ci/node/node_modules/.bin/claude plugin validate . --strict
+(node:441023) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+added 3 packages, and audited 4 packages in 3s
+
+1 high severity vulnerability
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Validating marketplace manifest: /workspace/osc-bulk-1119/diagram-design/wt-box-plot-accent-notations/.claude-plugin/marketplace.json
+
+✔ Validation passed

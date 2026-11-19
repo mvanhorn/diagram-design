@@ -1,0 +1,2 @@
+$ python3 scripts/test-css-string-scan.py
+OK CSS string scan: 15 verifier(s), 32 case(s) and 4 quoted-selector rule(s) each, 10 marimekko segment selector(s), 10 guarded rule(s) behind comment delimiters, escaped property checks across 11 verifiers, both polarities

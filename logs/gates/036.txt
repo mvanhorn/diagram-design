@@ -1,0 +1,21 @@
+$ python3 scripts/test-verify-doctor.py
+OK: expected scripts pass when all are present
+OK: missing expected script fails
+OK: routing surfaces pass when all are wired
+OK: routing mismatch fails
+OK: common path check returns non-fail in normal repository roots
+OK: installed skill in an arbitrary user project does not require maintainer files
+OK: a python3 that cannot report its version falls through to python
+OK: no runnable interpreter still fails, naming the first candidate
+OK: a command that cannot be launched is reported, not raised
+OK: a python3 that cannot be launched falls through to python
+OK: an empty PATH fails without naming a command
+OK: working default headless browser passes without a full executable path
+OK: unlaunchable Chromium stays WARN with its actual failure
+OK: browser is closed when its version inspection fails
+OK: real import probe does not require Playwright version metadata
+OK: a stalled subprocess probe becomes a diagnostic failure
+OK: inherited output handles cannot stall timeout tree cleanup
+OK: strict mode elevates WARN to failing exit code
+OK: report prints summary, next actions, and JSON payload
+All doctor verifier tests passed

@@ -1,0 +1,4 @@
+Re-run after `pip install --break-system-packages playwright` and `python3 -m playwright install chromium`.
+First gate run failed both lint-render commands with "Playwright is not installed" (exit 2).
+python3 scripts/lint-render.py --self-test  -> self-test OK: 46 cases, no false flags.  EXIT 0
+python3 scripts/lint-render.py --all        -> Summary: 240 file(s) rendered, 0 finding(s), 2 note(s). EXIT 0

@@ -1,0 +1,2 @@
+$ python3 scripts/verify-heatmap.py --all
+OK — 3 file(s) checked, no findings.

@@ -1,0 +1,2 @@
+$ python3 scripts/build-readme-thumbs.py --check
+OK readme thumbs: 52 images, 6108 KB -> 419 KB

@@ -1,0 +1,2 @@
+$ python3 scripts/test-verify-requirement-traceability.py
+OK requirement traceability: source, IDs, typed links, and explicit gaps

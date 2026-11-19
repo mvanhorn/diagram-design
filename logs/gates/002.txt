@@ -1,0 +1,2 @@
+$ python3 scripts/test-maintainer-policy.py
+OK maintainer policy: 4 manifests, 35 required current gates, 103 CI gates registered in local_commands
